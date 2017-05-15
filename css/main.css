@@ -246,6 +246,14 @@ td:last-child {
 }
 
 /*pager start----------------*/
+.main-post-list{
+  /*width: 0;*/
+  -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+       -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
 .post-container 
 .pager li{ 
   margin-top: 20px;
@@ -387,7 +395,14 @@ img::-moz-selection {
   .content-wrapper {
     z-index: 800;
     width: 70%;
-    margin-left: 30%; }
+    /*float: right;*/
+    margin-left: 30%;
+    /*-webkit-transition: all 0.5 ease-in-out;
+       -moz-transition: all 0.5 ease-in-out;
+        -ms-transition: all 0.5 ease-in-out;
+         -o-transition: all 0.5 ease-in-out;
+            transition: all 0.5 ease-in-out;*/
+  }
 
   .content-wrapper__inner {
     /*margin: 0 10%;*/
@@ -399,6 +414,7 @@ img::-moz-selection {
 
   .footer {
     display: block;
+    width: 100%;
     padding: 2em 0 0 0;
     border-top: 1px solid #DDDDDD;
     font-size: .7em;
@@ -518,11 +534,18 @@ img::-moz-selection {
     max-width: none;
     height: 100%;
     background: url(/images/background-cover.jpg) top left no-repeat #666666;
-    background-size: cover; }
+    background-size: cover;
+    -webkit-transition: all 0.5s ease-in-out;
+       -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+         -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+  }
 
   .panel-cover--collapsed {
     width: 22%;
-    max-width: 320px; }
+    /*max-width: 320px;*/
+  }
 
   .panel-cover--overlay {
     display: block;
@@ -1002,7 +1025,7 @@ img::-moz-selection {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards; }
 
-/*# sourceMappingURL=123.css.map */
+/* sourceMappingURL=123.css.map */
 
 
   @-webkit-keyframes list {
