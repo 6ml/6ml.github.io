@@ -357,12 +357,12 @@ img::-moz-selection {
   }
 
   .excerpt {
-    border-left: 3px solid #458B74; 
+    border-left: 3px solid rgba(158, 171, 179, 0.27); 
     margin: 0;
     margin-right: 10px;
     font-size: .9em;
     background-color: #FFF;
-    text-indent: 10px;
+    text-indent: 2em;
     color: #4F4F4F; 
   }
 
@@ -875,18 +875,17 @@ img::-moz-selection {
     float: left;
     /*display: none;*/
 
-    -moz-box-shadow:4px 4px 4px #efefef, 
-    -4px -4px 4px #efefef, 
-    4px -4px 4px #efefef, 
-    -4px 4px 4px #efefef; 
-    -webkit-box-shadow:4px 4px 4px #efefef, 
-    -4px -4px 4px #efefef, 
-    4px -4px 4px #efefef, 
-    -4px 4px 4px #efefef; 
-    box-shadow:4px 4px 4px #efefef, 
-    -4px -4px 4px #efefef, 
-    4px -4px 4px #efefef, 
-    -4px 4px 4px #efefef;
+    -webkit-box-shadow: 4px 4px 20px #dbdbdb;
+       -moz-box-shadow: 4px 4px 20px #dbdbdb;
+        -ms-box-shadow: 4px 4px 20px #dbdbdb;
+         -o-box-shadow: 4px 4px 20px #dbdbdb;
+            box-shadow: 4px 4px 20px #dbdbdb;
+
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
 
     -webkit-transform-origin:top center;
        -moz-transform-origin:top center;
@@ -1133,18 +1132,11 @@ img::-moz-selection {
 
   .post-list li:hover {
     /*transform:scale(1.01,1.01); */
-    -moz-box-shadow:4px 4px 4px #c9e1f6, 
-    -4px -4px 4px #c9e1f6, 
-    4px -4px 4px #c9e1f6, 
-    -4px 4px 4px #c9e1f6; 
-    -webkit-box-shadow:4px 4px 4px #c9e1f6, 
-    -4px -4px 4px #c9e1f6, 
-    4px -4px 4px #c9e1f6, 
-    -4px 4px 4px #c9e1f6; 
-    box-shadow:4px 4px 4px #c9e1f6, 
-    -4px -4px 4px #c9e1f6, 
-    4px -4px 4px #c9e1f6, 
-    -4px 4px 4px #c9e1f6;
+    -webkit-box-shadow: 4px 4px 20px #666;
+       -moz-box-shadow: 4px 4px 20px #666;
+        -ms-box-shadow: 4px 4px 20px #666;
+         -o-box-shadow: 4px 4px 20px #666;
+            box-shadow: 4px 4px 20px #666;
     /*background-color: #F5FFFA;*/
   }
 
