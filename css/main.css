@@ -290,17 +290,20 @@ td:last-child {
        -o-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
 }
-.post-container 
+.post-container {}
+.pager{
+  margin: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
 .pager li{ 
-  margin-top: 20px;
-  width:48%
+  /*width:48%*/
 }
 .next{
-  margin-top: 20px;
+  margin: 20px 20px 20px 0;
   float:right
 }
 .previous{
-  margin-top: 20px;
+  margin: 20px 0 20px 40px;
   float:left
 }
 .pager li>a{
@@ -326,6 +329,11 @@ td:last-child {
 }
 .pager li>a {
   color:#404040
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 .pager li>a:hover,
 .pager li>a:focus { 
@@ -499,6 +507,24 @@ img::-moz-selection {
   .post-meta__date span {
     margin: 0px;
     /*margin-right: .5em; */
+  }
+  .post-meta {
+    height: 24px;
+  }
+  .post-meta img{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 4px;
+  }
+  .post-meta .post-meta__date{
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 24px;
+  }
+  .post-meta #busuanzi_container_page_pv{
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 24px;
   }
 
 /*  .post-meta__tags {
@@ -1224,7 +1250,7 @@ img::-moz-selection {
 .post-list__meta--date img{
   display: inline-block;
   vertical-align: bottom;
-  margin: 5px 0;
+  margin-bottom: 7px;
 }
 
 .post-list__meta--date time{
