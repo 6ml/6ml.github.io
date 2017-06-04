@@ -252,6 +252,34 @@ td:last-child {
   padding-right: 10px; 
   border: 1px solid #363636;
 }
+/*scroll bar start-----------*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #999;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover{
+  background-color: #666;
+}
+
+::-webkit-scrollbar-thumb:vertical:active{
+  background-color: #333;
+}
+
+::-webkit-scrollbar-button{
+  display: none;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #f1f1f1;
+}
+/*scroll bar end-------------*/
 
 /*pager start----------------*/
 .main-post-list{
