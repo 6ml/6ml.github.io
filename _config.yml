@@ -10,8 +10,8 @@ url: "http://6ml.github.io"
 
 # Comment
 comment:
-    # disqus: leopard
-    duoshuo: LuPath 
+    disqus: lupath
+    # duoshuo: LuPath 
 
 # Social
 social:
