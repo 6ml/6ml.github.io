@@ -459,10 +459,15 @@ img::-moz-selection {
   .footer {
     display: block;
     width: 100%;
-    padding: 2em 0 0 0;
-    border-top: 1px solid #DDDDDD;
+    padding: 0 10px;
+    box-sizing: border-box;
+    /*border-top: 1px solid #DDDDDD;*/
     font-size: .7em;
     color: #b3b3b3; }
+
+  footer{
+    border-top: 1px solid #DDDDDD;
+  }
 
   .footer__copyright {
     display: block;
@@ -496,8 +501,30 @@ img::-moz-selection {
     display: none !important; }
 
   .post-comments {
-    border-top: 1px solid #DDDDDD;
-    padding: 60px 0; }
+    /*border-top: 1px solid #DDDDDD;*/
+    padding: 30px 0 0; }
+
+  #disqus_thread {
+    background-color: #272822;
+    padding: 20px;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+         -o-border-radius: 8px;
+            border-radius: 8px;
+    margin: 5px;
+    -webkit-box-shadow: 1px 2px 3px #000;
+       -moz-box-shadow: 1px 2px 3px #000;
+        -ms-box-shadow: 1px 2px 3px #000;
+         -o-box-shadow: 1px 2px 3px #000;
+            box-shadow: 1px 2px 3px #000;
+  }
+
+  #beforeLoadDisqus{
+    color: #ddd;
+    text-align: center;
+    margin: 5px 0;
+  }
 
   .post-meta {
     margin: 0;
