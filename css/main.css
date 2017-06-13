@@ -292,6 +292,38 @@ td:last-child {
           transition: all 0.5s ease-in-out;
 }
 .post-container {}
+.page ul,.card ul{
+  list-style: none;
+}
+.page ul li, .card ul li {
+  position: relative;
+}
+.page ul li::before, .card ul li::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  left: -20px;
+  width: 6px;
+  /*height: */
+  height: 6px;
+  top: 8px;
+  background-color: #000;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+       -o-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
+.page ul li:hover::before, .card ul li:hover::before {
+  background-color: #F66D25;
+  width: 12px;
+  left: -23px;
+}
 .pager{
   margin: 20px 0 0;
   border-top: 1px solid #ddd;
@@ -1251,6 +1283,7 @@ img::-moz-selection {
   .post-list__post-title a:hover {
     color: #000000; 
     background-color: #FAFAFA;
+    text-decoration: none;
   }
 
 
