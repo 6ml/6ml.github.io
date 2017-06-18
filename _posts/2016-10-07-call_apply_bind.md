@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "call apply bind"
-date: 2016-12-07
+date: 2016-10-07
 description: "显式绑定 this 对象的方法"
 tag: JavaScript
 ---
@@ -18,7 +18,7 @@ JavaScript 的一大特点是，函数存在 [定义时上下文] 和 [运行时
 ```
 function log(msg){
 
-	console.log(msg);
+    console.log(msg);
 
 }
 
@@ -26,10 +26,12 @@ log(1); //1
 
 log(1,2); //1
 ```
+
+
 ```
 function log(){
 
-	console.log.apply(console, arguments);
+    console.log.apply(console, arguments);
 
 }
 
@@ -41,9 +43,9 @@ log(1,2); //1 2
 ```
 log("hello world"); // (app)hello world
 
-function log(){
+function log() {
 
-	var args = Array.prototype.slice.call(arguments);
+    var args = Array.prototype.slice.call(arguments);
     
     args.unshift('(app)');
     
@@ -78,7 +80,7 @@ MDN的解释：`bind()`方法会创建一个新的函数，称之为绑定函数
 ```
 var foo = {
 
-	bar ： 1，
+    bar ： 1，
     
     eventBind: function(){
     
@@ -98,7 +100,7 @@ var foo = {
 ```
 var foo = {
 
-	bar : 1,
+    bar : 1,
     
     eventBind : function(){
     
@@ -118,7 +120,7 @@ var foo = {
 ```
 var bar = function(){
 
-	console.log(this.x);
+    console.log(this.x);
 
 }
 

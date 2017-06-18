@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "String 对象"
-date: 2017-04-11
+date: 2017-03-11
 description: "String 对象的属性和方法"
 tag: JavaScript
 ---
@@ -52,9 +52,13 @@ String对象用于处理文本(字符串)。
 | `toString()` | - | 返回字符串 | 字符串的原始字符串值 |
 | `valueOf()` | - | 返回String对象的原始值 | String 对象的原始值 |
 
-注意：
-`toLocaleLowerCase()`方法与`toLowerCase()`方法的区别在于它按照本地方式把字符串转换为小写，只有几种语言具有本地特有的大小写映射。该方法的返回值通常与`toLowerCase()`一样。
-`toLocaleUpperCase()`方法与`toUpperCase()`方法的区别在于它按照本地方式把字符串转换为大写，只有几种语言具有本地特有的大小写映射。该方法的返回值通常与`toUpperCase()`一样。
-当调用`toString()`方法的对象不是 String 时抛出 TypeError 异常。该方法不常用。
-当调用`valueOf()`方法的对象不是 String 时抛出 TypeError 异常。该方法通常有 JavaScript 在后台自动进行调用，而不是显式地处于代码中。
+### 注意
 
+-	**JavaScript 的字符串是不可变的（immutable），String 类定义的方法都不能改变字符串的内容。**
+-	`toLocaleLowerCase()`方法与`toLowerCase()`方法的区别在于它按照本地方式把字符串转换为小写，只有几种语言具有本地特有的大小写映射。该方法的返回值通常与`toLowerCase()`一样。
+-	`toLocaleUpperCase()`方法与`toUpperCase()`方法的区别在于它按照本地方式把字符串转换为大写，只有几种语言具有本地特有的大小写映射。该方法的返回值通常与`toUpperCase()`一样。
+-	当调用`toString()`方法的对象不是 String 时抛出 TypeError 异常。该方法不常用。
+-	当调用`valueOf()`方法的对象不是 String 时抛出 TypeError 异常。该方法通常有 JavaScript 在后台自动进行调用，而不是显式地处于代码中。
+
+> 参考文档
+- [Weschool JavaScript String 对象](http://www.w3school.com.cn/jsref/jsref_obj_string.asp)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Object对象 assign create 方法"
-date: 2016-12-07
+date: 2016-11-06
 description: "Object对象 assign create 方法"
 tag: JavaScript
 ---
@@ -28,7 +28,7 @@ Object.assign(target, ...sources)
 ```
 var source = {  //这是一个属性描述符对象
 
-	name: {
+    name: {
     
     	value: 'it笔录'  //name 是不可枚举属性
     

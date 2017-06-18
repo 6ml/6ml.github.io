@@ -3,7 +3,7 @@ layout: post
 title: "初识Redux"
 date: 2016-12-04
 description: "初识Redux"
-tag: Frame
+tag: Framework
 ---
 
 ### 基本概念
@@ -42,7 +42,7 @@ let next = store.dispatch;
 
 store.dispatch = function dispatchAndLog(action){
 
-	console.log('dispatching',action);
+    console.log('dispatching',action);
     
     next(action);
     
@@ -62,7 +62,7 @@ const logger = CreateLogger();
 
 const store = createStore(
 
-	reducer,
+    reducer,
     
     applyMiddleware(logger)
     
@@ -80,9 +80,9 @@ applyMiddleware(thunk, promise, logger)
 ```
 export default function applyMiddleware(...middlewares) {
 
-	return (createStore) => (reducer, preloadedState, enhancer) => {
+    return (createStore) => (reducer, preloadedState, enhancer) => {
     
-    	var store = createStore(reducer, preloadedState, enhancer);
+        var store = createStore(reducer, preloadedState, enhancer);
         
     	var dispatch = store.dispatch;
     
@@ -90,7 +90,7 @@ export default function applyMiddleware(...middlewares) {
 
     	var middlewareAPI = {
         
-      		getState: store.getState,
+            getState: store.getState,
             
       		dispatch: (action) => dispatch(action)
             
@@ -100,7 +100,7 @@ export default function applyMiddleware(...middlewares) {
         
     	dispatch = compose(...chain)(store.dispatch);
 
-    return {...store, dispatch}
+        return {...store, dispatch}
     
   	}
   
@@ -120,9 +120,9 @@ import reducer from './reducers';
 // Note: this API requires redux@>=3.1.0
 const store = createStore(
 
-  	reducer,
+    reducer,
   
-  	applyMiddleware(thunk)
+    applyMiddleware(thunk)
   
 );
 ```
@@ -162,9 +162,9 @@ const App = connect()(Main);
 ```
 const mapStateToProps = (state) => {
 
-	return {
+    return {
     
-    	todos: state.todos;
+        todos: state.todos;
     
     }
 
@@ -185,13 +185,13 @@ const mapStateToProps = (state) => {
 ```
 const mapDispatchToProps = (dispatch, ownProps) => {
 
-	return {
+    return {
     
-    	onClick: () => {
+        onClick: () => {
         
-        	dispatch({
+            dispatch({
             
-            	type: 'SET_VISIBILITY_FILTER',
+                type: 'SET_VISIBILITY_FILTER',
                 
                 filter: ownProps.filter
             
@@ -208,9 +208,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 ```
 const mapDispatchToProps = {
 
-	onClick: (filter) => {
+    onClick: (filter) => {
     
-    	type: 'SET_VISIBILITY_FILTER',
+        type: 'SET_VISIBILITY_FILTER',
         
         filter
     
@@ -227,7 +227,7 @@ import * as actionCreators from './actions/actionCreators';
 
 function mapDispatchToProps(dispatch){
 
-	return bindActionCreators(actionCreators, dispatch);
+    return bindActionCreators(actionCreators, dispatch);
 
 }
 ```
@@ -244,9 +244,9 @@ import App from './components/App';
 
 ReactDOM.render(
 
-	<Provider store={store}>
+    <Provider store={store}>
     
-    	<App />
+        <App />
         
     </Provider>,
     
@@ -260,13 +260,13 @@ ReactDOM.render(
 ```
 const Root = ({store}) => (
 
-	<Provider store={store}>
+    <Provider store={store}>
     
-    	<Router>
+        <Router>
         
-        	<Route path="/" component={App}>
+            <Route path="/" component={App}>
             
-            	<IndexRoute component={PhotoGrid}></IndexRoute>
+                <IndexRoute component={PhotoGrid}></IndexRoute>
                 
                 <Route path="/view/:postId" component={Single}></Route>
                 
@@ -284,7 +284,7 @@ React-router 还有一个`Link`标签，可以跳转到`to`属性指定的地方
 ```
 <Link to={`/view/${post.code}`}>
 
-	<img src={post.display_src}>
+    <img src={post.display_src}>
     
 </Link>
 ```

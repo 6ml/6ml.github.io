@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "浅谈ES6"
-date: 2016-12-05
+date: 2016-12-01
 description: "简单讲解一下 ES6 的语法"
 tag: JavaScript
 ---
@@ -19,7 +19,7 @@ ECMAScript 6(简称ES6)是JavaScript语言的下一代标准。ES6在2015年发�
  
  for(var i = 0;i < 10;i++){
  
-	a[i] = function(){
+    a[i] = function(){
     
     	console.log(i);
     
@@ -33,7 +33,7 @@ ECMAScript 6(简称ES6)是JavaScript语言的下一代标准。ES6在2015年发�
 ```
  function iteratorFactory(i){
  
-	var onclick = function(e){
+    var onclick = function(e){
     
     	console.log(i);
     
@@ -57,7 +57,7 @@ ECMAScript 6(简称ES6)是JavaScript语言的下一代标准。ES6在2015年发�
  
  for(let i = 0;i < 10;i++){
  
-	a[i] = function(){
+    a[i] = function(){
     
     	console.log(i);
     
@@ -79,14 +79,14 @@ ECMAScript 6(简称ES6)是JavaScript语言的下一代标准。ES6在2015年发�
 ```
  const moment = require('moment');
 ```
-***
+
 ### class,extends,super
 这三个特性涉及了ES5中最头疼的几个部分：原型、构造函数、继承...
 ES6提供了更接近传统语言的写法，引入Class(类)这个概念。新的`class`写法让对象原型的写法更加清晰，更像面向对象编程的写法，也更加通俗易懂。
 ```
  class Animal{
  
-	constructor(){
+    constructor(){
     
     	this.type = 'animal';
     
@@ -106,7 +106,7 @@ ES6提供了更接近传统语言的写法，引入Class(类)这个概念。新�
  
  class Cat extends Animal{
  
-	constructor(){
+    constructor(){
     
     	super();
         
@@ -129,7 +129,7 @@ Class之间可以通过`extends`关键字实现继承，这比ES5通过修改原
 ES6的继承机制，实质是先创造父类的实例对象this(所以必须先调用super方法)，然后再用子类的构造函数修改`this`。
 
 PS.如果你写react的话，就会发现以上三个东西在最新版React中出现得很多。创建的每个component都是一个继承`React.Component`的类。[详见React文档](https://facebook.github.io/react/docs/components-and-props.html)
-***
+
 ### arrow function
 也就是我们所说的箭头函数了。这个几乎是ES6最常用的一个新特性了，用它来写function十分的简洁清晰。
 ```
@@ -155,7 +155,7 @@ PS.如果你写react的话，就会发现以上三个东西在最新版React中�
 ```
  function(x,y){
  
-	x++;
+    x++;
     
     y++;
     
@@ -170,7 +170,7 @@ PS.如果你写react的话，就会发现以上三个东西在最新版React中�
 ```
  class Animal{
  
-	constructor(){
+    constructor(){
     
     	this.type = 'animal';
         
@@ -194,6 +194,7 @@ PS.如果你写react的话，就会发现以上三个东西在最新版React中�
 ```
 运行上面的代码会报错，因为`setTimeout`中的`this`指向的是全局对象。为了避免这个问题，传统解决方案有两种：
 - 第一种是将this传给self，再用self来只带this
+
 ```
  says(say){
 	
@@ -207,7 +208,9 @@ PS.如果你写react的话，就会发现以上三个东西在最新版React中�
     
  }
 ```
+
 - 第二种是用`bind`方法
+
 ```
  says(say){
 	
@@ -221,6 +224,7 @@ PS.如果你写react的话，就会发现以上三个东西在最新版React中�
 ```
 
 但是现在我们有了箭头函数，就不用这么麻烦了。
+
 ```
  says(say){
 	
@@ -232,14 +236,16 @@ PS.如果你写react的话，就会发现以上三个东西在最新版React中�
     
  }
 ```
+
 当我们使用箭头函数时，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
 并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this对象，它的this是继承外面的，因此内部的this就是外层代码块的this。
 
 **注意：箭头函数如果返回对象字面量的话要用括号括起来**,如下：
+
 ```
  const func = () => ({foo : '1'});
 ```
-***
+
 ### template string
 这个东西也非常有用，当我们要插入大段的html内容到文档中时，传统的写法非常麻烦，所以之前我们通常会引用一些模板工具库，比如mustache等等。
 按照传统方法我们会这样写这段代码：
@@ -264,8 +270,8 @@ PS.如果你写react的话，就会发现以上三个东西在最新版React中�
     
  `);
 ```
-用反引号` ` `来标识起始，用`${}`来引用变量，而且所有的空格和缩进都会被保留在输出之中。
-***
+用反引号<code class="highlighter-rouge">`</code>来标识起始，用`${}`来引用变量，而且所有的空格和缩进都会被保留在输出之中。
+
 ### destructuring
 ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构(Destructuing)。
 看看下面的例子：
@@ -296,7 +302,7 @@ ES6允许按照一定模式，从数组和对象中提取值，对变量进行�
  
  console.log(type, many); //animal 2
 ```
-***
+
 ### default,rest,spread
 `default`很简单，意思就是默认值。我们调用函数时忘了传参数时默认的方法是加上一句`type = type || 'cat'`来指定默认值。
 ```
@@ -387,7 +393,7 @@ ES6允许按照一定模式，从数组和对象中提取值，对变量进行�
  
  let arr = [...x, ...y, ...z]; //['a', 'b', 'c', 'd', 'e']
 ```
-***
+
 ### import,export
 这两个家伙对应的就是ES6自己的`module`功能。
 > ES6模块的设计思想，是尽量的静态化，是得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西。
@@ -433,8 +439,8 @@ ES6允许按照一定模式，从数组和对象中提取值，对变量进行�
  
  export default 'a cat';
 ```
-***
-####ES6 module的其他高级用法
+
+#### ES6 module的其他高级用法
 ```
  //content.js
  

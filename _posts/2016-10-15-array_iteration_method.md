@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "数组迭代方法"
-date: 2016-12-07
+date: 2016-10-15
 description: "数组迭代的六种方法"
 tag: JavaScript
 ---

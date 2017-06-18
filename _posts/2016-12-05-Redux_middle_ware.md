@@ -3,7 +3,7 @@ layout: post
 title: "Redux中间件"
 date: 2016-12-05
 description: "redux中间件的实现"
-tag: Frame
+tag: Framework
 ---
 
 ### 什么是中间件
@@ -25,7 +25,7 @@ export default function applyMiddleware(...middlewares) {
         
         var middlewareAPI = {
         
-        	getState : store.getState,
+            getState : store.getState,
             
             dispatch : (action) => dispatch(action)
         
@@ -37,7 +37,7 @@ export default function applyMiddleware(...middlewares) {
         
         return{
         
-        	...store,
+            ...store,
             
             dispatch
         
@@ -59,9 +59,12 @@ given:
     
 then:
 
-	(f ∘ g)(x) = f(g(x)) = f(2x) = 4x^2 + 6x + 1
+    (f ∘ g)(x) = f(g(x)) = f(2x) = 4x^2 + 6x + 1
 ```
 我们可以将上面的方式扩展到组合两个或者更多个函数这都是可以的。我们再来看个例子，演示组合两个函数并返回一个新的函数。
 
 ### Redux Middleware
 Redux 中间件被设计成**可组合**的，会**在**`dispatch`**方法之前调用**的函数。
+
+> 参考文档
+- [深入浅出Redux中间件](http://www.tuicool.com/articles/u6JRjyz) 作者：Kazaff

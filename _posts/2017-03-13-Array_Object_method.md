@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Array 对象"
-date: 2017-04-30
+date: 2017-03-13
 description: "Array 对象的属性和方法介绍"
 tag: JavaScript
 ---
@@ -32,7 +32,10 @@ Array对象用于在单一变量中存储多个值。
 |`toLocaleString()`| 无 | 数组对象的本地字符串表示 | 字符串 | false |
 | `valueOf()` | 无 | 返回数组对象的原始值 | 原始值 | false |
 
-说明：
-`toString()`方法返回的字符串与不加参数的`join()`返回的字符串相同，`toLocaleString()`方法返回的字符串是使用地区特定的分隔符把生成的字符串连接起来。
-`toSource()`方法和`valueOf()`方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。
+### 说明
+-	`toString()`方法返回的字符串与不加参数的`join()`返回的字符串相同，`toLocaleString()`方法返回的字符串是使用地区特定的分隔符把生成的字符串连接起来。
+-	`toSource()`方法和`valueOf()`方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。
 **注意：**`splice()`**会直接修改数组对象**。
+
+> 参考文档
+- [Weschool JavaScript Array 对象](http://www.w3school.com.cn/jsref/jsref_obj_array.asp)
