@@ -297,13 +297,13 @@ td:last-child {
           transition: all 0.5s ease-in-out;
 }
 .post-container {}
-.page ul,.card ul{
+.page ul, .card ul, blockquote ul{
   list-style: none;
 }
-.page ul li, .card ul li {
+.page ul li, .card ul li, blockquote ul li {
   position: relative;
 }
-.page ul li::before, .card ul li::before {
+.page ul li::before, .card ul li::before, blockquote ul li::before {
   content: " ";
   position: absolute;
   display: block;
@@ -324,7 +324,7 @@ td:last-child {
        -o-transition: all 0.3s ease;
           transition: all 0.3s ease;
 }
-.page ul li:hover::before, .card ul li:hover::before {
+.page ul li:hover::before, .card ul li:hover::before, blockquote ul li:hover::before {
   background-color: #F66D25;
   width: 12px;
   left: -23px;
@@ -332,6 +332,9 @@ td:last-child {
 .pager{
   margin: 20px 0 0;
   border-top: 1px solid #ddd;
+}
+ul.pager {
+  list-style: none;
 }
 .pager li{ 
   /*width:48%*/
@@ -341,7 +344,7 @@ td:last-child {
   float:right
 }
 .previous{
-  margin: 20px 0 20px 40px;
+  margin: 20px 0 20px 30px;
   float:left
 }
 .pager li>a{
@@ -367,6 +370,18 @@ td:last-child {
 }
 .pager li>a {
   color:#404040
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+       -o-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
+.pager li>a span{
   -webkit-transition: all 0.3s ease;
      -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
@@ -375,13 +390,18 @@ td:last-child {
 }
 .pager li>a:hover,
 .pager li>a:focus { 
-  color:#fff;
-  background-color:#B9D3EE;
+  color: #F66D25;
+  background-color: #F0F0F0;
+  -webkit-box-shadow: 1px 1px 5px #999;
+     -moz-box-shadow: 1px 1px 5px #999;
+      -ms-box-shadow: 1px 1px 5px #999;
+       -o-box-shadow: 1px 1px 5px #999;
+          box-shadow: 1px 1px 5px #999;
   /*text-decoration: none;*/
 }
 .pager li>a:hover>span,
 .pager li>a:focus>span{
-  color:#fff;
+  color: #F66D25;
 }
 ::-moz-selection { 
   color:#fff;
@@ -403,11 +423,9 @@ img::-moz-selection {
 }
 
 @media all and (max-width: 600px) {
-  .next{
-    float:left;
-  }
-  .previous{
-    float:left;
+  ul.pager .previous, ul.pager .next {
+    float: none;
+    margin: 20px 0 0 60px;
   }
 }
 /*pager end----------------*/
@@ -1604,7 +1622,8 @@ input[type="tel"]:-ms-input-placeholder {
     width: 80%;
     max-width: none;
     margin: 0 auto; 
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
   }
   .content-wrapper__inner {
     margin-right: 0;
@@ -1637,12 +1656,20 @@ input[type="tel"]:-ms-input-placeholder {
  .panel-title {
     margin-bottom: .1em;
   }
-
   .panel-subtitle {
     font-size: .6em; 
   }
   .post-container {
     padding: 10px;
+  }
+  article.post-container--single {
+    padding-top: 30px;
+  }
+  table{
+    width: 100%;
+  }
+  th:first-child, td:first-child {
+    padding: 0 5px 0 10px; 
   }
  }
 
