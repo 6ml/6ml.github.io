@@ -11,6 +11,7 @@ tag: JavaScript
 var a = {n : 1};
 var b = a;
 a.x = a = {n : 2};
+
 console.log(b.x); //{n : 2}
 console.log(a.x); //undefined
 ```
@@ -34,6 +35,7 @@ Object.prototype.a = 1;
 Function.prototype.b = 2;
 function Foo(){};
 var foo = new Foo();
+
 console.log(Foo.a); //1
 console.log(Foo.b); //2
 console.log(foo.a); //1
@@ -56,6 +58,7 @@ console.log(Object.b) //2
 ```JavaScript
 var a = 1;
 a.b = 21;
+
 console.log(a.b);
 ```
 考点：基本类型、包装对象
@@ -69,12 +72,17 @@ console.log(a.b);
 ### 第四题
 ```JavaScript
 function Foo() {
+
     getName = function () { console.log(1); };
     return this;
 }
+
 Foo.getName = function () { console.log(2);};
+
 Foo.prototype.getName = function () { console.log(3);};
+
 var getName = function () { console.log(4);};
+
 function getName() { console.log(5);}
 
 //请写出以下输出结果：
@@ -91,9 +99,11 @@ new new Foo().getName();		//3
 上面的代码在声明提升后会变成下面的样子
 ```JavaScript
 function Foo() {
+
     getName = function () { console.log(1); };
     return this;
 }
+
 function getName() { console.log(5);}
 var getName;//重复声明，忽略掉
 Foo.getName = function () { console.log(2);};
